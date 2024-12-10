@@ -1,12 +1,20 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-takahashi-test-library';
+import {
+  asyncCalculation,
+  asyncVopt,
+  getuuid,
+} from 'react-native-takahashi-test-library';
 
 export default function App() {
   const [result, setResult] = useState<number | undefined>();
 
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    asyncVopt({ opt_1: 'aaa' });
+    getuuid().then(function (id) {
+      console.log(id);
+    });
+    asyncCalculation(3, 7).then(setResult);
   }, []);
 
   return (
