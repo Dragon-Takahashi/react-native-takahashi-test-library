@@ -185,7 +185,10 @@
     "version": "0.44.2"
   },
   "dependencies": {
+    "@babel/plugin-syntax-flow": "^7.26.0",
+    "@babel/plugin-transform-parameters": "^7.25.9",
     "@react-native-async-storage/async-storage": "^2.1.0",
+    "@react-native/codegen": "^0.76.5",
     "react-native-uuid": "^2.0.3"
   }
 }
